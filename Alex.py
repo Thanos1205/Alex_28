@@ -809,6 +809,14 @@ def undo_last_question():
     except Exception:
         pass
 
+    # restore whether the question was shown before undo
+    try:
+        prev_shown = last_action.get("previous_shown") if isinstance(last_action, dict) else None
+        if prev_shown is not None:
+            progress[cat]["shown"][idx] = prev_shown
+    except Exception:
+        pass
+
     current_category = cat
     current_question_answered = False
     last_action = None
@@ -853,6 +861,11 @@ def submit(mode):
     ai_answer = get_chatgpt_answer(question, current_category, idx)
     # track which ai_answers entries we modify so undo can restore them
     modified_ai = []
+    # remember whether this question's answers were shown before submit
+    try:
+        old_shown = progress[current_category]["shown"][idx]
+    except Exception:
+        old_shown = False
     # record/restore current idx ai answer early to avoid double-recording
     try:
         old_ai = progress[current_category]["ai_answers"][idx]
@@ -995,6 +1008,7 @@ def submit(mode):
         "previous_failed": previous_failed,
         "previous_failed_index": previous_failed_index,
         "ai_answers_modified": modified_ai,
+        "previous_shown": old_shown,
     }
 
     # make undo available until the user clicks elsewhere
