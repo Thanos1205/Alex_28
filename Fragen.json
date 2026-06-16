@@ -1,0 +1,299 @@
+{
+    "Bloons": [
+        {
+        "q": "Welche Runden muss man im Modus Deflation spielen? (z.B. '10-20')",
+        "answer": "30-60",
+        "options": ["20-50", "30-60", "40-60", "30-50"]
+        },
+        {
+        "q": "Wie viele Medaillen gibt es pro Map (nur Singleplayer)?",
+        "answer": "14",
+        "options": ["8", "10", "12", "14"]
+        },
+        {
+        "q": "Welche Kategorie hat die meisten Maps?",
+        "answer": "Beginner",
+        "options": ["Beginner", "Intermediate", "Advanced", "Expert"]
+        },
+        {
+        "q": "Wie viele T2 Tower können Camo Lead poppen?",
+        "answer": "7",
+        "options": ["7", "9", "11", "13"]
+        },
+        {
+        "q": "Welche Intermediate-Map hat die meisten 'removable objects'?",
+        "answer": "Polyphemus",
+        "options": ["Encrypted", "Polyphemus", "Quiet Street", "Bazaar"]
+        }
+    ],
+    "Titan Quest": [
+        {
+        "q": "Wie viele Meisterschaften gibt es (ohne Erweiterung) in Titan Quest?",
+        "answer": "6",
+        "options": ["6", "7", "8", "9"]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        }
+    ],
+    "Age of Empires": [
+        {
+        "q": "Mit welcher Farbe startet der erste Spieler in der Lobby?",
+        "answer": "Blau",
+        "options": ["Blau", "Grün", "Rot", "Gelb"]
+        },
+        {
+        "q": "Wie viele Nationen gab es im Originalspiel von AoE 3?",
+        "answer": "8",
+        "options": ["5", "8", "11", "14"]
+        },
+        {
+        "q": "Mit wie vielen Leben startet der Kundschafter in Age 1?",
+        "answer": "400",
+        "options": ["200", "400", "600", "800"]
+        },
+        {
+        "q": "Kann Eric ein 1v1 gegen Experte gewinnen (Map ohne Wasser)?",
+        "answer": "Ja, es wird es euch direkt beweisen!",
+        "options": ["Ja, es wird es euch direkt beweisen!", "Nein, er wird safe verlieren!", "Nur mit Tobi", "Nur mit TuckTuckTuck"]
+        },
+        {
+        "q": "Kannst du ein 1v1 gegen Experte gewinnen (Map ohne Wasser)?",
+        "answer": "Ja, ich spiele jetzt direkt!",
+        "options": ["Ja, ich spiele jetzt direkt!", "Ja, in unter 1 Minuten. Ich spiele jetzt direkt!", "Ja, in unter 2 Minuten. Ich spiele jetzt direkt!", "Ja, in unter 3 Minuten. Ich spiele jetzt direkt!"]
+        }
+    ],
+    "JBB": [
+        {
+        "q": "Wie viele Maskenrapper haben das JBB gewonnen?",
+        "answer": "4",
+        "options": ["1", "2", "3", "4"]
+        },
+        {
+        "q": "Wie viele Battle Runden von SpongeBOZZ gibt es im JBB?",
+        "answer": "7",
+        "options": ["5", "6", "7", "8"]
+        },
+        {
+        "q": "Welcher Battlerapper (mit Niederlage) hat die beste Siegesquote im JBB?",
+        "answer": "Laskah",
+        "options": ["EnteTainment", "Johnny Diggson", "Laskah", "Gio"]
+        },
+        {
+        "q": "Wie viele Turniere gab es auf dem JBB Kanal (ohne Mini-JBB)?",
+        "answer": "12",
+        "options": ["6", "8", "10", "12"]
+        },
+        {
+        "q": "Vervollständige den Turnierbaum eines Jahres!",
+        "answer": "Ich nenne dir alle Teilnehmer von 2012!",
+        "options": ["Ich nenne dir alle Teilnehmer von 2012!", "Ich nenne dir alle Teilnehmer von 2013!", "Ich nenne dir alle Teilnehmer von 2014!", "Ich nenne dir alle Teilnehmer von 2015!"]
+        }
+    ],
+    "Politik": [
+        {
+        "q": "Wer hat die Bürgermeisterwahlen in Langen 2025 kläglich verloren?",
+        "answer": "Niklas Berger",
+        "options": ["Juri Gagarin", "Arno Dübel", "Eric Clapton", "Niklas Berger"]
+        },
+        {
+        "q": "Was ist die Legislative?",
+        "answer": "Die gesetzgebende Gewalt",
+        "options": ["Die Gerichte", "Die Polizei", "Die gesetzgebende Gewalt", "Die Regierung"]
+        },
+        {
+        "q": "Wie heißt das Parlament auf Bundesebene in Deutschland?",
+        "answer": "Bundestag",
+        "options": ["Bundesrat", "Bundestag", "Bundesversammlung", "Kanzleramt"]
+        },
+        {
+        "q": "Welche Institution der EU wird direkt von den Bürgerinnen und Bürgern der Mitgliedstaaten gewählt?",
+        "answer": "Europäisches Parlament",
+        "options": ["Europäische Kommission", "Europäischer Rat", "Europäischer Gerichtshof", "Europäisches Parlament"]
+        },
+        {
+        "q": "Welches Land wurde 2024 das 32. Mitglied der NATO?",
+        "answer": "Schweden",
+        "options": ["Schweden", "Ukraine", "Finnland", "Georgien"]
+        }
+    ],
+    "Filme": [
+        {
+        "q": "Wer spielt den Joker in The Dark Knight?",
+        "answer": "Heath Ledger",
+        "options": ["Heath Ledger", "Jared Leto", "Jack Nicholson", "Michael Caine"]
+        },
+        {
+        "q": "Welcher Film hat die meisten Oscars gewonnen?",
+        "answer": "Titanic (1997)",
+        "options": ["Vom Winde verweht (1939)", "Ben-Hur (1959)", "Titanic (1997)", "Der Herr der Ringe: Die Rückkehr des Königs (2003)"]
+        },
+        {
+        "q": "Welcher Film erzählt von dem Leben von Stephan Hawking?",
+        "answer": "The Theory of Everything",
+        "options": ["The Imitation Game - Ein streng geheimes Leben", "A Beautiful Mind - Genie und Wahnsinn", "The King's Speech", "The Theory of Everything"]
+        },
+        {
+        "q": "Welcher Schauspieler hat Severus Snape gespielt?",
+        "answer": "Alan Rickman",
+        "options": ["Alan Rickman", "Christopher Lee", "Ralph Fiennes", "Tom Felton"]
+        },
+        {
+        "q": "Welches Buch diente als Grundlage für den Film “Oppenheimer”?",
+        "answer": "American Prometheus",
+        "options": ["The Making of the Atomic Bomb", "The Manhattan Project", "American Prometheus", "Atom and Void: Essays on Science and Community"]
+        }
+    ],
+    "Serien": [
+        {
+        "q": "Wie lautet die Adresse von Sherlock Holmes?",
+        "answer": "221B Baker Street",
+        "options": ["221B Baker Street", "221B Baker Road", "221C You Later", "221A FaKu Raptor22"]
+        },
+        {
+        "q": "Welche Politikerin besitzt in The Boys die Fähigkeit, Köpfe explodieren zu lassen?",
+        "answer": "Victoria Neuman",
+        "options": ["Ashley Barrett", "Madelyn Stillwell", "Victoria Neuman", "Grace Mallory"]
+        },
+        {
+        "q": "Wer vergiftet Brock Cantillo in Breaking Bad?",
+        "answer": "Walter White",
+        "options": ["Saul Goodman", "Walter White", "Mike Ehrmantraut", "Gustavo Fring"]
+        },
+        {
+        "q": "Wer ist Butters' Alter Ego als Superheld in der Serie South Park?",
+        "answer": "Professor Chaos",
+        "options": ["The Coon", "Mint-Berry Crunch", "Professor Chaos", "Mysterion"]
+        },
+        {
+        "q": "Wie nennt sich die Version von Rick, der die meisten Abenteuer der Serie erlebt?",
+        "answer": "Rick C-137",
+        "options": ["Rick Prime", "Rick J-22", "Rick C-137", "Rick Alpha"]
+        }
+    ],
+    "IT": [
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        }
+    ],
+    "Physik": [
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        }
+    ],
+    "Schach": [
+        {
+        "q": "Wie viele mögliche erste Züge hat Weiß in der Ausgangsstellung?",
+        "answer": "20",
+        "options": ["20", "22", "24", "26"]
+        },
+        {
+        "q": "Welche Eröffnung beginnt mit 1.e4 e5 2.Sf3 Sc6 3.Lb5?",
+        "answer": "Ruy Lopez",
+        "options": ["Sizilianische Verteidigung", "Französisch", "Ruy Lopez", "Caro-Kann"]
+        },
+        {
+        "q": "Welche Struktur entsteht typischerweise in der „Sizilianischen Drachenvariante“?",
+        "answer": "Fianchetto des schwarzen Läufers",
+        "options": ["Symmetrische Bauernkette in der Mitte", "Geschlossene Bauernstruktur", "Doppelbauern eines Spielers", "Fianchetto des schwarzen Läufers"]
+        },
+        {
+        "q": "Wer gewann den Chess World Cup 2025 in Goa?",
+        "answer": "Javokhir Sindarov",
+        "options": ["Praggnanandhaa", "Javokhir Sindarov", "Nodirbek Abdusattorov", "Wei Yi"]
+        },
+        {
+        "q": "Welches Land hat die meisten Spieler mit über 2700 (05.06.2026)?",
+        "answer": "USA",
+        "options": ["Indien", "USA", "Russland", "Usbekistan"]
+        }
+    ],
+    "Random": [
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "Wer einmal … dem glaubt man nicht, und wenn er auch die Wahrheit …!",
+        "answer": "clappt; clappt",
+        "options": ["lügt; spricht", "anschniedelt; schniedelt", "clappt; clappt", "schwul ist; spricht"]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        },
+        {
+        "q": "",
+        "answer": "",
+        "options": ["", "", "", ""]
+        }
+    ]
+}
