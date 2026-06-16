@@ -5,8 +5,16 @@ from tkinter import ttk
 import random
 import threading
 import time
-from PIL import Image, ImageTk
-import pygame
+
+try:
+    from PIL import Image, ImageTk
+except ImportError:
+    raise ImportError("Pillow is not installed. Install it with: pip install Pillow")
+
+try:
+    import pygame
+except ImportError:
+    raise ImportError("pygame is not installed. Install it with: pip install pygame")
 
 # -----------------------------
 # GAME DATA
@@ -29,16 +37,18 @@ def validate_game_data(game_data):
 
 
 def load_game_data():
-    path = pathlib.Path(__file__).with_name("Fragen.json")
-    if path.exists():
-        try:
-            with path.open("r", encoding="utf-8") as f:
-                data = json.load(f)
-            return validate_game_data(data)
-        except Exception as exc:
-            raise ValueError(f"Fehler beim Laden von Fragen.json: {exc}")
-    else:
-        raise FileNotFoundError("Fragen.json not found. Please create the file with the appropriate structure.")
+    # support both German and English filenames; prefer Fragen.json but fall back to Questions.json
+    dirp = pathlib.Path(__file__).parent
+    candidates = [dirp / "Fragen.json", dirp / "Questions.json"]
+    for path in candidates:
+        if path.exists():
+            try:
+                with path.open("r", encoding="utf-8") as f:
+                    data = json.load(f)
+                return validate_game_data(data)
+            except Exception as exc:
+                raise ValueError(f"Fehler beim Laden von {path.name}: {exc}")
+    raise FileNotFoundError("Fragen.json or Questions.json not found. Please create the file with the appropriate structure.")
 
 pygame.mixer.init()
 
@@ -58,8 +68,8 @@ def load_chatgpt_data():
                 return json.load(f)
         except Exception as exc:
             raise ValueError(f"Fehler beim Laden von ChatGPT.json: {exc}")
-    else:
-        raise FileNotFoundError("ChatGPT.json not found. Please create the file with the appropriate structure.")
+    # ChatGPT.json is optional now; return empty dict when missing
+    return {}
 
 chatgpt_data = load_chatgpt_data()
 
@@ -104,7 +114,11 @@ def set_music_volume(val):
         music_volume = float(val)
     except Exception:
         music_volume = 0.0
+    try:
+        # apply immediately to currently playing music
         pygame.mixer.music.set_volume(music_volume)
+    except Exception:
+        pass
 
 def set_effects_volume(val):
     global effects_volume
@@ -412,15 +426,25 @@ def update_all_category_buttons():
 
 
 def get_chatgpt_answer(question, cat, idx):
+    # prefer per-question ai_answer embedded in the game data
+    try:
+        if isinstance(question, dict):
+            ai_ans = question.get("ai_answer") or question.get("aiAnswer") or question.get("ai")
+            if ai_ans and str(ai_ans).strip() != "":
+                return ai_ans
+    except Exception:
+        pass
+
+    # fallback to legacy ChatGPT.json structure if present
     answers = chatgpt_data.get(cat, []) if isinstance(chatgpt_data, dict) else []
     if idx < len(answers):
         item = answers[idx]
-        if item.get("q") == question.get("q"):
+        if isinstance(item, dict) and item.get("q") == question.get("q"):
             return item.get("answer")
     for item in answers:
-        if item.get("q") == question.get("q"):
+        if isinstance(item, dict) and item.get("q") == question.get("q"):
             return item.get("answer")
-    if idx < len(answers):
+    if idx < len(answers) and isinstance(answers[idx], dict):
         return answers[idx].get("answer")
     return None
 
@@ -773,6 +797,18 @@ def undo_last_question():
     progress[cat]["failed"] = previous_failed
     progress[cat]["failed_index"] = previous_failed_index
 
+    # restore any AI answers that were set by the undone action
+    try:
+        modified = last_action.get("ai_answers_modified") if isinstance(last_action, dict) else None
+        if modified:
+            for j, old in modified:
+                try:
+                    progress[cat]["ai_answers"][j] = old
+                except Exception:
+                    pass
+    except Exception:
+        pass
+
     current_category = cat
     current_question_answered = False
     last_action = None
@@ -815,6 +851,22 @@ def submit(mode):
     previous_failed_index = progress[current_category]["failed_index"]
 
     ai_answer = get_chatgpt_answer(question, current_category, idx)
+    # track which ai_answers entries we modify so undo can restore them
+    modified_ai = []
+    # record/restore current idx ai answer early to avoid double-recording
+    try:
+        old_ai = progress[current_category]["ai_answers"][idx]
+    except Exception:
+        old_ai = None
+    try:
+        progress[current_category]["user_answers"][idx] = user
+        progress[current_category]["ai_answers"][idx] = ai_answer
+    except Exception:
+        pass
+    try:
+        modified_ai.append((idx, old_ai))
+    except Exception:
+        pass
     ai_points = 0
     additional_ai = 0
     user_points = 0
@@ -851,12 +903,24 @@ def submit(mode):
             cat = current_category
             total_q = len(game_data[cat])
             for j in range(total_q):
-                # skip if AI answer already recorded
-                if progress[cat]["ai_answers"][j] is not None:
+                # skip current index (already handled) and any AI answers already recorded
+                if j == idx or progress[cat]["ai_answers"][j] is not None:
                     continue
                 q = game_data[cat][j]
                 ai_ans_j = get_chatgpt_answer(q, cat, j)
-                progress[cat]["ai_answers"][j] = ai_ans_j
+                try:
+                    old_val = progress[cat]["ai_answers"][j]
+                except Exception:
+                    old_val = None
+                try:
+                    progress[cat]["ai_answers"][j] = ai_ans_j
+                except Exception:
+                    pass
+                try:
+                    # record modifications so undo can restore
+                    modified_ai.append((j, old_val))
+                except Exception:
+                    pass
                 if ai_ans_j and ai_ans_j.strip().lower() == q["answer"].strip().lower():
                     additional_ai += 1
             # Don't add to progress/ai_score here; will do it once at the end
@@ -864,17 +928,31 @@ def submit(mode):
         except Exception:
             additional_ai = 0
 
-    progress[current_category]["user_answers"][idx] = user
-    progress[current_category]["ai_answers"][idx] = ai_answer
+    # record/restore current idx ai answer
+    try:
+        old_ai = progress[current_category]["ai_answers"][idx]
+    except Exception:
+        old_ai = None
+    try:
+        progress[current_category]["user_answers"][idx] = user
+        progress[current_category]["ai_answers"][idx] = ai_answer
+    except Exception:
+        pass
+    # record that we modified this index (even if old was None)
+    try:
+        modified_ai.append((idx, old_ai))
+    except Exception:
+        pass
 
     # Check if AI answered the current question correctly
     ai_correct_current = (ai_answer is not None and ai_answer.strip().lower() == correct.strip().lower())
     ai_points_current = 1 if ai_correct_current else 0
 
     # Calculate total AI points for this action
-    # If user failed: additional_ai (from other questions) + ai_points_current (from this question)
+    # If user failed: additional_ai (from this and following questions)
     # If user correct: only ai_points_current (from this question)
     if not correct_answer:
+        # include current question's AI correctness
         ai_points = additional_ai + ai_points_current
     else:
         ai_points = ai_points_current
@@ -916,6 +994,7 @@ def submit(mode):
         "ai_points": ai_points,
         "previous_failed": previous_failed,
         "previous_failed_index": previous_failed_index,
+        "ai_answers_modified": modified_ai,
     }
 
     # make undo available until the user clicks elsewhere
