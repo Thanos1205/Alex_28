@@ -532,13 +532,13 @@ def load_question():
         for opt in current_options:
             row = tk.Frame(option_frame, bg=option_frame.cget("bg"), height=72)
             row.pack_propagate(False)
-            left_icon_frame = tk.Frame(row, width=90, height=90, bg=option_frame.cget("bg"))
+            left_icon_frame = tk.Frame(row, width=75, height=90, bg=option_frame.cget("bg"))
             left_icon_frame.pack_propagate(False)
             user_icon_label = tk.Label(left_icon_frame, image="", bg=option_frame.cget("bg"))
             user_icon_label.pack(expand=True)
             btn = tk.Button(row, text=opt, width=32, height=2, font=("Arial", 12), state="disabled", anchor="w", padx=8)
             btn.default_bg = btn.cget("bg")
-            right_icon_frame = tk.Frame(row, width=90, height=90, bg=option_frame.cget("bg"))
+            right_icon_frame = tk.Frame(row, width=75, height=90, bg=option_frame.cget("bg"))
             right_icon_frame.pack_propagate(False)
             ai_icon_label = tk.Label(right_icon_frame, image="", bg=option_frame.cget("bg"))
             ai_icon_label.pack(expand=True)
@@ -638,7 +638,7 @@ def render_option_buttons(disabled=False, mark_shown=False, show_idx=None):
     for opt in current_options:
         row = tk.Frame(option_frame, bg=option_frame.cget("bg"), height=72)
         row.pack_propagate(False)
-        left_icon_frame = tk.Frame(row, width=90, height=90, bg=option_frame.cget("bg"))
+        left_icon_frame = tk.Frame(row, width=75, height=90, bg=option_frame.cget("bg"))
         left_icon_frame.pack_propagate(False)
         user_icon_label = tk.Label(left_icon_frame, image="", bg=option_frame.cget("bg"))
         user_icon_label.pack(expand=True)
@@ -647,7 +647,7 @@ def render_option_buttons(disabled=False, mark_shown=False, show_idx=None):
         btn.default_bg = btn.cget("bg")
         if disabled:
             btn.config(state="disabled")
-        right_icon_frame = tk.Frame(row, width=90, height=90, bg=option_frame.cget("bg"))
+        right_icon_frame = tk.Frame(row, width=75, height=90, bg=option_frame.cget("bg"))
         right_icon_frame.pack_propagate(False)
         ai_icon_label = tk.Label(right_icon_frame, image="", bg=option_frame.cget("bg"))
         ai_icon_label.pack(expand=True)

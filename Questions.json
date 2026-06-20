@@ -12,7 +12,7 @@
       "ai_answer": "30-60"
     },
     {
-      "q": "Wie viele Medaillen gibt es pro Map (nur Singleplayer)?",
+      "q": "Wie viele Medaillen gibt es pro Map im Singleplayer?",
       "answer": "14",
       "options": [
         "8",
@@ -213,7 +213,7 @@
         "Grinch Hill vs. David Nine",
         "Gio vs. SpongeBOZZ"
       ],
-      "ai_answer": ""
+      "ai_answer": "EnteTainment vs. Neo"
     },
     {
       "q": "Vervollständige den Turnierbaum eines Jahres!",
@@ -571,57 +571,57 @@
   ],
   "Random": [
     {
-      "q": "",
-      "answer": "",
+      "q": "Wie lautet der Name einer chinesischen LoL-Mannschaft?",
+      "answer": "Bilibili Gaming",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "Bilibili Gaming",
+        "TeuerTeuer Gaming",
+        "Was letzte Preis Gaming",
+        "Sushi-Leis Gaming"
+      ],
+      "ai_answer": "Bilibili Gaming"
+    },
+    {
+      "q": "Wer einmal … dem glaubt man nicht, und wenn er auch die Wahrheit …! (verb 1 / verb 2)",
+      "answer": "clappt / clappt",
+      "options": [
+        "lügt / spricht",
+        "jaxt / schniedelt",
+        "clappt / clappt",
+        "schwul ist / spricht"
+      ],
+      "ai_answer": "clappt / clappt"
+    },
+    {
+      "q": "In welchem Winkel zum Boden ist der Arm bei einer Wortmeldung von Johanna Niemanns gehoben?",
+      "answer": "-180 Grad",
+      "options": [
+        "-180 Grad",
+        "160 Grad",
+        "90 Grad",
+        "180 Grad"
+      ],
+      "ai_answer": "180 Grad"
+    },
+    {
+      "q": "Wie hieß der Heimatplanet von Sam Recker aus dem Text Adventure 2 von Eric?",
+      "answer": "Jallut",
+      "options": [
+        "Jallut",
+        "Ypodoulos",
+        "Dreadnought",
+        "Valinir"
       ],
       "ai_answer": ""
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "Welche Namen wurden nie für die beiden Hauptcharaktere von 'Japanoschlampen' verwendet?",
+      "answer": "Chao Kingkan Singpingbum Pitittibingbangbum & Wakeshimu Tanemahazuana Kawasakishimi Hondatetanepan",
       "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "ai_answer": ""
-    },
-    {
-      "q": "Wer einmal … dem glaubt man nicht, und wenn er auch die Wahrheit …!",
-      "answer": "clappt; clappt",
-      "options": [
-        "lügt; spricht",
-        "anschniedelt; schniedelt",
-        "clappt; clappt",
-        "schwul ist; spricht"
-      ],
-      "ai_answer": ""
-    },
-    {
-      "q": "",
-      "answer": "",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "ai_answer": ""
-    },
-    {
-      "q": "",
-      "answer": "",
-      "options": [
-        "",
-        "",
-        "",
-        ""
+        "Chao & Wakeshimu Tanemahazuana Ketchupketchup Tittenopan",
+        "Chao Pingbang Shingpingpam Pitingpimpampum & Wakeshimu Tanemahatsuna Tschinkwai Tschinktong Wanowan",
+        "Chao Wingching Hongfingshong Pingpangpong & Wakeshimu Tanemahatsuna Kitschtupanic Nisnanepan",
+        "Chao Kingkan Singpingbum Pitittibingbangbum & Wakeshimu Tanemahazuana Kawasakishimi Hondatetanepan"
       ],
       "ai_answer": ""
     }
