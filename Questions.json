@@ -59,72 +59,61 @@
   "Titan Quest": [
     {
       "q": "Wie viele Meisterschaften gibt es (ohne Erweiterung) in Titan Quest?",
-      "answer": "6",
+      "answer": "8",
       "options": [
         "6",
         "7",
         "8",
         "9"
       ],
-      "ai_answer": ""
+      "ai_answer": "8"
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "Welches Attribut wird durch Punkte in der Kriegsmeisterschaft nicht(!) erhöht?",
+      "answer": "Energie",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "Energie",
+        "Stärke",
+        "Geschicklichkeit",
+        "Leben"
       ],
-      "ai_answer": ""
+      "ai_answer": "Energie"
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "Wie viele Pets kann man mit der Natur Meisterschaft alleine beschwören?",
+      "answer": "4",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "3",
+        "4",
+        "5",
+        "6"
       ],
-      "ai_answer": ""
+      "ai_answer": "4"
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "Wie heißt das letzte Portal in Ägypten?",
+      "answer": "Tal der Könige",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "Theben",
+        "Fayun",
+        "Oberer Nil",
+        "Tal der Könige"
       ],
-      "ai_answer": ""
+      "ai_answer": "Tal der Könige"
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "Welche Meisterschaft hat die meisten passiven Skills?",
+      "answer": "Kriegskunst",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "Natur",
+        "Kriegskunst",
+        "Verteidigung",
+        "Gaunerei"
       ],
-      "ai_answer": ""
+      "ai_answer": "Kriegskunst"
     }
   ],
   "Age of Empires": [
-    {
-      "q": "Mit welcher Farbe startet der erste Spieler in der Lobby?",
-      "answer": "Blau",
-      "options": [
-        "Blau",
-        "Grün",
-        "Rot",
-        "Gelb"
-      ],
-      "ai_answer": "Blau"
-    },
     {
       "q": "Wie viele Nationen gab es im Originalspiel von AoE 3?",
       "answer": "8",
@@ -135,6 +124,17 @@
         "14"
       ],
       "ai_answer": "8"
+    },
+    {
+      "q": "Wie viele Ressourcen braucht man insgesamt für alle Age up's von 1 - 5?",
+      "answer": "14200",
+      "options": [
+        "12200",
+        "13800",
+        "14200",
+        "15800"
+      ],
+      "ai_answer": "14200"
     },
     {
       "q": "Mit wie vielen Leben startet der Kundschafter in Age 1?",
@@ -148,24 +148,24 @@
       "ai_answer": "200"
     },
     {
-      "q": "Kann Eric ein 1v1 gegen Experte gewinnen (Map ohne Wasser)?",
-      "answer": "Ja, er wird es euch direkt beweisen!",
+      "q": "Welchen der folgenden Begriffe, würde ein AoE III Pro nicht kennen?",
+      "answer": "Age Locking",
       "options": [
-        "Ja, er wird es euch direkt beweisen!",
-        "Nein, er wird safe verlieren!",
-        "Nur mit Tobi",
-        "Nur mit TuckTuckTuck"
+        "Kiting",
+        "Stagger",
+        "Semi-FF",
+        "Age Locking"
       ],
       "ai_answer": ""
     },
     {
-      "q": "Kannst du ein 1v1 gegen Experte gewinnen (Map ohne Wasser)?",
-      "answer": "Ja, ich spiele jetzt direkt!",
+      "q": "Eric hat ein Game gegen Experte gespielt. Hat er gewonnen?",
+      "answer": "Ja, er hat in unter 20min gewonnen!",
       "options": [
-        "Ja, ich spiele jetzt direkt!",
-        "Ja, in unter 1 Minute. Ich spiele jetzt direkt!",
-        "Ja, in unter 2 Minuten. Ich spiele jetzt direkt!",
-        "Ja, in unter 3 Minuten. Ich spiele jetzt direkt!"
+        "Ja, er hat in unter 20min gewonnen!",
+        "Ja, er hat in über 20min gewonnen!",
+        "Nein, er hat in unter 20min verloren!",
+        "Nein, er hat in über 20min verloren!"
       ],
       "ai_answer": ""
     }
@@ -319,15 +319,15 @@
       "ai_answer": "The Theory of Everything"
     },
     {
-      "q": "Welcher Schauspieler hat Severus Snape gespielt?",
-      "answer": "Alan Rickman",
+      "q": "Wofür steht in neuen Filmen von Superman das S auf seiner Brust?",
+      "answer": "Symbol für Hoffnung",
       "options": [
-        "Alan Rickman",
-        "Christopher Lee",
-        "Ralph Fiennes",
-        "Tom Felton"
+        "Superman",
+        "Anfangsbuchstabe von seinem ursprünglichen Namen",
+        "Anfangsbuchstabe von seinem Heimatplaneten",
+        "Symbol für Hoffnung"
       ],
-      "ai_answer": "Alan Rickman"
+      "ai_answer": "Symbol für Hoffnung"
     },
     {
       "q": "Welches Buch diente als Grundlage für den Film “Oppenheimer”?",
@@ -400,116 +400,116 @@
   ],
   "IT": [
     {
-      "q": "",
-      "answer": "",
+      "q": "Wie nennt man (in der Informatik) eine Schritt für Schritt Anleitung?",
+      "answer": "Algorithmus",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "Turingmaschine",
+        "Algorithmus",
+        "Rezept",
+        "Bruder, woher soll ich das wissen?"
       ],
-      "ai_answer": ""
+      "ai_answer": "Algorithmus"
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "Wie heißt die Firma, welche Matlab entwickelt?",
+      "answer": "MathWorks",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "MathWorks",
+        "Mathematica",
+        "WolframAlpha",
+        "Alexander Berkes Inc."
       ],
-      "ai_answer": ""
+      "ai_answer": "MathWorks"
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "Wie heißt der Entwickler des World Wide Web?",
+      "answer": "Tim Berners-Lee",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "Mark Zuckerberg",
+        "Robert Cailliau",
+        "Larry Page",
+        "Tim Berners-Lee"
       ],
-      "ai_answer": ""
+      "ai_answer": "Tim Berners-Lee"
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "Nach welchem Wissenschaftler ist ein Algorithmus für kürzeste Pfade in Graphen benannt?",
+      "answer": "Edsger Dijkstra",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "Harry Goode",
+        "Edsger Dijkstra",
+        "Jan van de Snepscheut",
+        "Robert Tarjan"
       ],
-      "ai_answer": ""
+      "ai_answer": "Edsger Dijkstra"
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "Wie heißt die erste höhere (high level) Programmiersprache?",
+      "answer": "Plankalkül",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "C",
+        "Fortran",
+        "Plankalkül",
+        "Short Code"
       ],
-      "ai_answer": ""
+      "ai_answer": "Fortran"
     }
   ],
   "Physik": [
     {
-      "q": "",
-      "answer": "",
+      "q": "Wie viele Newtonsche Gesetze gibt es?",
+      "answer": "3",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "1",
+        "2",
+        "3",
+        "4"
       ],
-      "ai_answer": ""
+      "ai_answer": "3"
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "Wie heißt der Effekt, welcher z.B. Golfbällen Auftrieb verleiht oder Fußbällen eine bogenartige Flugkurve?",
+      "answer": "Magnus-Effekt",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "Magnus-Effekt",
+        "Fabiano-Effekt",
+        "Hans-Effekt",
+        "Garry-Effekt"
       ],
-      "ai_answer": ""
+      "ai_answer": "Magnus-Effekt"
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "In welchem Jahr gewann DeepMind's AlphaFold das erste Mal die CASP competition?",
+      "answer": "2018",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "2010",
+        "2014",
+        "2018",
+        "2022"
       ],
-      "ai_answer": ""
+      "ai_answer": "2018"
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "Wann hat das letzte Mal ein deutscher Forscher den Physik-Nobelpreis gewonnen?",
+      "answer": "2021",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "2010",
+        "2013",
+        "2017",
+        "2021"
       ],
-      "ai_answer": ""
+      "ai_answer": "2021"
     },
     {
-      "q": "",
-      "answer": "",
+      "q": "Wie stark ist der aktuell leistungsstärkste Laser?",
+      "answer": "10 PW",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "10 TW",
+        "100 TW",
+        "1 PW",
+        "10 PW"
       ],
-      "ai_answer": ""
+      "ai_answer": "10 PW"
     }
   ],
   "Schach": [
