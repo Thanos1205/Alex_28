@@ -160,12 +160,12 @@
     },
     {
       "q": "Eric hat ein Game gegen Experte gespielt. Hat er gewonnen?",
-      "answer": "Ja, er hat in unter 20min gewonnen!",
+      "answer": "Ja, er hat in unter 15min gewonnen!",
       "options": [
-        "Ja, er hat in unter 20min gewonnen!",
-        "Ja, er hat in über 20min gewonnen!",
-        "Nein, er hat in unter 20min verloren!",
-        "Nein, er hat in über 20min verloren!"
+        "Ja, er hat in unter 15min gewonnen!",
+        "Ja, er hat in über 15min gewonnen!",
+        "Nein, er hat in unter 15min verloren!",
+        "Nein, er hat in über 15min verloren!"
       ],
       "ai_answer": ""
     }
